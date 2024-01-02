@@ -12,10 +12,13 @@ const AddUser = (props) => {
         if(enterUserName.trim().length === 0 || enterAge.trim().length === 0){
             return;
         }
-        
+
         if(enterAge < 1){
             return;
         }
+
+        props.onAddUser(enterUserName, enterAge);
+
 
         setEnterUserName('');
         setEnterAge('');
